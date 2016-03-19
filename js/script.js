@@ -4,7 +4,7 @@ setBoxSize(numBoxes);
 $(document).ready(function(){
   drawGrid();
   $('button').click(function(){
-    $('.square').removeClass('highlight');
+    $('.square').remove();
     requestUserInput();
     setBoxSize(numBoxes);
     drawGrid();
@@ -17,7 +17,9 @@ function drawGrid(){
   }
   $('.square').css({'height':setSize, 'width':setSize});
   $('.square').hover(function(){
+    /* $('.highlight').css("background-color", randomColor()); */
     $(this).addClass('highlight');
+    $(this).css('opacity', '+=0.1');
   });
 }
 
@@ -36,4 +38,12 @@ function requestUserInput () {
 
 function setBoxSize(num) {
   setSize = 600 / num - 6;
+}
+
+function randomRGB() {
+  return Math.floor(Math.random()*256);
+}
+
+function randomColor() {
+  return 'rgb('+randomRGB()+','+randomRGB()+','+randomRGB()+')';
 }
