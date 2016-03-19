@@ -1,0 +1,29 @@
+.container{
+  height: 610px;
+  width: 610px;
+  margin: 20px auto;
+}
+
+.grid{
+  height: 610px;
+  width: 610px;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: #fafafa;
+}
+
+.square{
+  margin: 3px;
+  display: inline-block;
+  background-color: #A4A4A4;
+}
+
+.highlight{
+  background-color: #0040FF;
+}
+
+button{
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+}
